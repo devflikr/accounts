@@ -1,0 +1,45 @@
+{
+    "cSpell.words": [
+        "adduser",
+        "authchooser",
+        "clsx",
+        "createuser",
+        "devflikr",
+        "devflikrauth",
+        "Dewangan",
+        "extralight",
+        "firstname",
+        "Flikr",
+        "fullname",
+        "lastname",
+        "loadsvg",
+        "MYACCOUNT",
+        "neatkit",
+        "oasishovered",
+        "oasisitem",
+        "oasismenu",
+        "removesession",
+        "removesessions",
+        "Shivam",
+        "Signin",
+        "signup",
+        "svgr",
+        "tailwindcss",
+        "tippyjs",
+        "updateprofile",
+        "updateusername",
+        "userauth",
+        "usercontact"
+    ],
+    "editor.fontLigatures": false,
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cx\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ]
+    ]
+}

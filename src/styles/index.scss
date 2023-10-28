@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+a:is(:hover, :focus-visible) {
+    text-decoration: underline;
+}
+
+a {
+    @apply text-blue-500 hover:text-blue-700 font-semibold transition-all hover:no-underline inline-block;
+}
+
+
+
+.animate-transiting {
+    background-image: linear-gradient(90deg, transparent, rgb(54, 54, 199), transparent);
+    background-size: 200% 5px;
+    animation: animate-transiting 1s linear infinite forwards;
+}
+
+@keyframes animate-transiting {
+    0% {
+        background-position-x: 100%;
+    }
+
+    100% {
+        background-position-x: -100%;
+    }
+}
