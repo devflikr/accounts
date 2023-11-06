@@ -55,7 +55,7 @@ function SignupPage() {
             </FlexBox>
             <Typography><ErrorBox name="default" /></Typography>
             <FlexBox justify="between">
-                <Button as="submit" display="block">Sign in</Button>
+                <Button as="submit" display="block">Create Account</Button>
             </FlexBox>
             <Content>
                 <Typography>Already have an account? <SafeLink to="/signin">Login instead</SafeLink></Typography>
