@@ -2,7 +2,7 @@ import React from "react";
 import FormContext, { FormErrorKeys, FormErrors, FormSetter, FormValues } from "./FormContext";
 import useAnimatedContainerContext from "../../layouts/AnimatedContainer/useAnimatedContainerContext";
 import { AxiosError } from "axios";
-import AuthReject from "../../devflikrauth/types/AuthReject";
+import { AuthReject } from "devflikrauth";
 
 export interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {
     submit?: (values: FormValues, setErrors: FormSetter<FormErrors>, parseError: ErrorParser) => Promise<void> | void;
