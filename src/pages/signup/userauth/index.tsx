@@ -10,8 +10,10 @@ import useSafeNavigate from "../../../hooks/useSafeNavigate";
 import { useAuthCurrentUser } from "react-devflikrauth-hooks";
 import { updateUserUsername } from "devflikrauth";
 import UserBanner from "../UserBanner";
+import { useDocumentTitle } from "react-unique-hooks";
 
 function SignupUserAuthPage() {
+    useDocumentTitle("Username");
     const navigate = useSafeNavigate();
 
     const [user] = useAuthCurrentUser();

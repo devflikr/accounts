@@ -9,8 +9,10 @@ import Tagline from "../../components/Tagline";
 import Typography from "../../components/Typography";
 import { useState } from "react";
 import RecoverSuccess from "./Recover";
+import { useDocumentTitle } from "react-unique-hooks";
 
 function RecoverPage() {
+    useDocumentTitle("Reset Password");
     const [success, setSuccess] = useState(false);
     return (
         <Form submit={async (values, setErrors, parseError) => {

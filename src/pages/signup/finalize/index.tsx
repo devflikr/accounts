@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "react-unique-hooks";
 import Button from "../../../components/Button";
 import Content from "../../../components/Content";
 import FlexBox from "../../../components/FlexBox";
@@ -8,7 +9,7 @@ import UserBanner from "../UserBanner";
 import { useAuthCurrentUser } from "react-devflikrauth-hooks";
 
 function SignupFinalizePage() {
-
+    useDocumentTitle("Agree and Continue");
     const [user] = useAuthCurrentUser();
 
     if (!user) return <SafeNavigate to="/" replace />

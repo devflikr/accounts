@@ -1,3 +1,4 @@
+import { useDocumentTitle } from "react-unique-hooks";
 import Button from "../../components/Button";
 import Content from "../../components/Content";
 import ErrorBox from "../../components/ErrorBox";
@@ -11,6 +12,7 @@ import useSafeNavigate from "../../hooks/useSafeNavigate";
 import { createUserWithEmailAndPassword, updateUserProfile } from "devflikrauth";
 
 function SignupPage() {
+    useDocumentTitle("Sign up");
     const navigate = useSafeNavigate();
     return (
         <Form submit={async (values, setErrors, parseError) => {

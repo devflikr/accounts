@@ -8,9 +8,11 @@ import SafeLink from "../../components/SafeLink";
 import Tagline from "../../components/Tagline";
 import Typography from "../../components/Typography";
 import useSafeNavigate from "../../hooks/useSafeNavigate";
+import { useDocumentTitle } from "react-unique-hooks";
 
 function LoginPage() {
     const navigate = useSafeNavigate();
+    useDocumentTitle("Sign in");
     return (
         <Form submit={async (values, setErrors, parseError) => {
             try {

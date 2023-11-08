@@ -4,9 +4,10 @@ import Tagline from '../../components/Tagline';
 import UserAccounts from './UserAccounts';
 import { useAuthUsers } from "react-devflikrauth-hooks";
 import SafeNavigate from '../../components/SafeNavigate';
+import { useDocumentTitle } from 'react-unique-hooks';
 
 function AuthChooserPage() {
-
+    useDocumentTitle("Select Account");
     const [users] = useAuthUsers();
 
     if (!users.length) return <SafeNavigate to="/signin" replace />

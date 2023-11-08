@@ -16,6 +16,7 @@ import { setCurrentAuthIndex } from "devflikrauth";
 import { useAuthCurrentUser, useAuthUsers } from "react-devflikrauth-hooks";
 import { LazyImage } from "neatkit/components";
 import RecoverPage from "./pages/recover";
+import NotFoundPage from "./pages/notfound";
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
                         <Route path="/authchooser" element={<AnimatedContent element={<AuthChooserPage />} />} />
                         <Route path="/recover" element={<AnimatedContent element={<RecoverPage />} />} />
                         <Route path="/redirect" element={<AnimatedContent element={<RedirectPage />} />} />
+                        <Route path="/*" element={<AnimatedContent element={<NotFoundPage />} />} />
                         <Route path="/" element={<AnimatedContent element={<NoAuthRedirect />} />} />
                     </Routes>}
                     {/* </AnimatePresence> */}

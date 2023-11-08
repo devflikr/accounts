@@ -23,7 +23,7 @@
     "react-icons": "^4.11.0",
     "react-loadsvg": "^1.0.5",
     "react-router-dom": "^6.16.0",
-    "react-unique-hooks": "^0.1.2",
+    "react-unique-hooks": "^0.1.9",
     "tailwind-merge": "^1.14.0",
     "uuid": "^9.0.1",
     "vite-plugin-svgr": "^4.1.0"

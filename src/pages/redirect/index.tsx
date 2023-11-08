@@ -1,8 +1,10 @@
 import React from 'react';
 import useSafeSearchParams from '../../hooks/useSafeSearchParams';
 import Typography from '../../components/Typography';
+import { useDocumentTitle } from 'react-unique-hooks';
 
 function RedirectPage() {
+    useDocumentTitle("Redirecting");
     const { redirect, useAuth } = useSafeSearchParams();
 
     React.useEffect(() => {

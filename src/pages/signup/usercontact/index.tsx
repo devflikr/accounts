@@ -10,8 +10,10 @@ import { updateUserProfile } from "devflikrauth";
 import useSafeNavigate from "../../../hooks/useSafeNavigate";
 import { useAuthCurrentUser } from "react-devflikrauth-hooks";
 import UserBanner from "../UserBanner";
+import { useDocumentTitle } from "react-unique-hooks";
 
 function SignupUserContactPage() {
+    useDocumentTitle("Contacts");
     const navigate = useSafeNavigate();
 
     const [user] = useAuthCurrentUser();
