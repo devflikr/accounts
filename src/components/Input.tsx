@@ -37,21 +37,18 @@ function Input({ id, name, label, placeholder, onChange, noSpaces, defaultValue,
     });
 
     return (
-        <Content className="[.flexbox-parent>&]:px-0">
-            <fieldset className="relative w-full" disabled={disabled}>
+        <Content className="[.flexbox-parent>&]:px-0 w-full my-2 sm:my-5">
+            <fieldset className="relative w-full flex flex-col-reverse gap-2" disabled={disabled}>
                 <input onChange={handleChange} value={value} className={twMerge(classNames(
-                    "px-2 pt-5 pb-[2px] w-full outline-none rounded-none bg-transparent transition-all duration-150 peer",
-                    "border-0 border-b-2 border-b-gray-700 focus-visible:border-b-blue-700",
+                    "px-2 py-2 bg-white flex-1 outline-none rounded  min-w-[0] w-full transition-all duration-150 shadow-[0_0_4px_2px_#0001] peer",
+                    "border-0 border-b-[3px] border-b-transparent focus-visible:border-b-blue-700 focus-visible:rounded-none",
                     {
                         "border-b-red-600 focus-visible:border-b-red-600": errors[uid],
                     },
                 ))} {...{ id: uid, name: uid }} {...props} placeholder={placeholder || ""} />
                 <label htmlFor={uid} className={twMerge(classNames(
-                    "absolute left-2 top-[2px] text-sm line-clamp-1 max-w-[calc(100%_-_calc(2_*_2_*_4px))] font-semibold transition-all duration-150",
-                    "peer-focus-visible:text-sm peer-focus-visible:top-[2px]",
-                    "peer-placeholder-shown:text-base peer-placeholder-shown:top-4",
+                    "text-sm line-clamp-1 max-w-[calc(100%_-_calc(2_*_2_*_4px))] font-semibold transition-all duration-150",
                     "text-gray-500 peer-focus-visible:text-blue-700",
-                    "cursor-text peer-disabled:cursor-default",
                     {
                         "text-red-600 peer-focus-visible:text-red-600": errors[uid],
                     }

@@ -56,10 +56,10 @@ function Account({ name, email, profile, redirect, attach }: AccountProps) {
     const navigate = useSafeNavigate();
 
     return (
-        <li>
-            <button type="button" className="w-full block px-2 sm:px-6 hover:bg-blue-50 focus-within:bg-blue-100 active:bg-blue-100 transition-all" onClick={() => navigate(redirect + (attach || ""))}>
-                <span className="w-full flex flex-row flex-nowrap items-center gap-3 border-b border-b-gray-300 p-2 [li:last-of-type>button>&]:border-b-0">
-                    <span className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
+        <li className="after:w-[calc(100%_-_23px)] last-of-type:after:hidden mb-[1px] after:h-[0.5px] after:bg-gray-300 relative after:absolute after:-bottom-[0.5px] after:right-0 pl-5">
+            <button type="button" className="w-full block px-2 hover:bg-white rounded-l-full focus-within:bg-white active:bg-white transition-all" onClick={() => navigate(redirect + (attach || ""))}>
+                <span className="w-full flex flex-row flex-nowrap items-center gap-3 px-2 py-3">
+                    <span className="min-w-[40px] w-10 h-10 rounded-full overflow-hidden flex items-center justify-center">
                         <img className="rounded-full max-w-full max-h-full" src={profile || `http://localhost:8978/userprofile/${name}`} alt={name} />
                     </span>
                     <span className="block text-left leading-4">

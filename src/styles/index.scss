@@ -19,6 +19,16 @@ a {
     @apply text-blue-500 hover:text-blue-700 font-semibold transition-all hover:no-underline inline-block;
 }
 
+.generative-container {
+    background-color: #fff;
+    background-image: radial-gradient(circle at top right, #fff, #b1bedb);
+}
+.generative-bg {
+    background-image: url(/assets/generative-x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 .animate-transiting {

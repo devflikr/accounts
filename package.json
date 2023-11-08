@@ -15,6 +15,7 @@
     "clsx": "^2.0.0",
     "devflikrauth": "^0.1.16",
     "framer-motion": "^10.16.4",
+    "neatkit": "^0.0.22",
     "react": "^18.2.0",
     "react-devflikrauth-hooks": "^0.0.4",
     "react-dom": "^18.2.0",

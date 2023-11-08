@@ -43,13 +43,14 @@ function SignupPage() {
                 <Tagline>to create a new account</Tagline>
             </Content>
 
-            <FlexBox gap="5" align="start">
+            <FlexBox align="start" className="flex-col sm:flex-row gap-2 sm:gap-5">
                 <Input name="firstname" autoComplete="given-name" label="First name" autoFocus noSpaces required />
                 <Input name="lastname" autoComplete="family-name" label="Last name (optional)" noSpaces />
             </FlexBox>
 
             <Input name="username" type="email" autoComplete="email" label="Email address" noSpaces required />
-            <FlexBox gap="5" align="start">
+
+            <FlexBox align="start" className="flex-col sm:flex-row gap-2 sm:gap-5">
                 <Input name="password" type="password" autoComplete="new-password" label="New password" required />
                 <Input name="confirm" type="password" autoComplete="new-password" label="Confirm password" required />
             </FlexBox>

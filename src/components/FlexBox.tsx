@@ -61,9 +61,9 @@ export interface FlexBoxProps extends React.HTMLAttributes<HTMLDivElement>, Vari
 
 }
 
-function FlexBox({ flow, align, justify, gap, ...props }: FlexBoxProps) {
+function FlexBox({ flow, align, justify, gap, className, ...props }: FlexBoxProps) {
     return (
-        <Content className={classNames("flexbox-parent", twMerge(clsx(flexBoxVariants({ flow, align, justify, gap }))))} {...props} />
+        <Content className={classNames("flexbox-parent", twMerge(clsx(flexBoxVariants({ flow, align, justify, gap })), className))} {...props} />
     )
 }
 
