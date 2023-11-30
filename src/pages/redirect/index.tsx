@@ -5,12 +5,19 @@ import { useDocumentTitle } from 'react-unique-hooks';
 
 function RedirectPage() {
     useDocumentTitle("Redirecting");
-    const { redirect, useAuth } = useSafeSearchParams();
+    const { redirect, callback, useAuth } = useSafeSearchParams();
 
     React.useEffect(() => {
         console.log(redirect);
+        if (callback && window.opener) {
+            const cb = (window.opener as unknown as { [key: string]: unknown })[callback];
+            if (cb && typeof cb === 'function') {
+                cb();
+                window.close();
+            }
+        }
         if (redirect) window.location.replace(`${redirect}${redirect.includes("?") ? "&" : "?"}auth=${useAuth || 0}`);
-    }, [redirect, useAuth]);
+    }, [callback, redirect, useAuth]);
 
     return <Typography>Redirecting...</Typography>;
 }
