@@ -12,8 +12,13 @@ function RedirectPage() {
         if (callback && window.opener) {
             const cb = (window.opener as unknown as { [key: string]: unknown })[callback];
             if (cb && typeof cb === 'function') {
-                cb();
-                window.close();
+                try {
+                    cb();
+                } catch (error) {
+                    console.error(error);
+                } finally {
+                    window.close();
+                }
             }
         }
         if (redirect) window.location.replace(`${redirect}${redirect.includes("?") ? "&" : "?"}auth=${useAuth || 0}`);
